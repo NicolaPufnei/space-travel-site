@@ -216,7 +216,7 @@ span{
         height:100vh;
         top:0;
         right:-100%;
-        width: 40%;
+        width: 50%;
         position:fixed;
         flex-direction: column;
         transition: 300ms ease-in;
