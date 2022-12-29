@@ -545,7 +545,7 @@ span{
         border-bottom: 1.5px solid var(--white);
     }
     body{
-        background-image: url('images/background-destination-mobile.jpg');
+        background: url('images/background-destination-mobile.jpg') repeat;
     }
     .transparent-photo{
         display: flex;
@@ -588,10 +588,13 @@ span{
         text-align: center;
     }
     .about{
+        flex-direction: column;
         justify-content: center;
+        margin-bottom: 3rem;
     }
     .planet-nav{
-        margin-top:1rem;
+        margin-top:2rem;
+        margin-bottom: 1rem;
     }
     .planet-nav-list{
         justify-content: center;
