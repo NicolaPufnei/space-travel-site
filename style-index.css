@@ -203,7 +203,7 @@ span{
 @media (max-width:805px){
     body{
         background-image: url("images/background-home-mobile.jpg");
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-size: cover;
     }
     .wrapper{
