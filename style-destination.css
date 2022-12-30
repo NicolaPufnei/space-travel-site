@@ -75,6 +75,7 @@ nav{
     z-index:99;
     height: 100%;
     backdrop-filter: blur(1rem) brightness(1.2);
+    -webkit-backdrop-filter: blur(1rem) brightness(1.2);
     /* border:2px solid magenta; */
     list-style-type: none;
     display: flex;
