@@ -17,7 +17,7 @@ html{
 }
 body{
     overflow-x:hidden;
-    background-image:url("images/background-destination-desktop.jpg") no-repeat center center fixed;
+    background: url('images/background-destination-desktop.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -225,7 +225,7 @@ span{
         height:100vh;
         top:0;
         right:-100%;
-        width: 40%;
+        width: 55%;
         position:fixed;
         flex-direction: column;
         transition: 300ms ease-in;
@@ -257,18 +257,21 @@ span{
     /* link hover state */
 
 
+.nav-item a{
+    letter-spacing: 2.7px;
+}
 .nav-list .current-page{
-    padding-bottom: 1.9rem;
-    border-bottom: 2px solid var(--white);
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid var(--white);
 }
 .nav-list .nav-item:hover a{
-    padding-bottom: 1.9rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.50);
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.50);
     transition:100ms;
 }
 .nav-list .nav-item:hover .current-page{
-    padding-bottom: 1.9rem;
-    border-bottom: 2px solid var(--white);
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid var(--white);
 }
 
 
@@ -295,12 +298,12 @@ span{
     font-weight: 400;
     text-transform: uppercase;
 }
-.moon .facts{
+/* .moon .facts{
     font-family: 'Barlow', sans-serif;
     font-size:18px;
     font-weight: 400;
     color:#D0D6F9;
-}
+} */
 .about .p1{
     font-size:14px;
     letter-spacing: 2.36px;
@@ -420,6 +423,7 @@ span{
 .destination-wrapper{
     /* border:2px solid magenta; */
     display: flex;
+    margin-top:2rem;
     flex-direction: column;
     gap:2rem;
     width: 80%;
@@ -445,6 +449,7 @@ span{
 }
 .destination-info{
     /* border:2px solid magenta; */
+    margin-top:2rem;
     display: flex;
 }
 .planet-nav-list{
@@ -515,16 +520,16 @@ span{
 @media (max-width:805px) {
     .nav-list .current-page{
         padding-bottom: 0.75rem;
-        border-bottom: 1.5px solid var(--white);
+        border-bottom: 1px solid var(--white);
     }
     .nav-list .nav-item:hover a{
         padding-bottom: 0.75rem;
-        border-bottom: 1.5px solid rgba(255, 255, 255, 0.50);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.50);
         transition:100ms;
     }
     .nav-list .nav-item:hover .current-page{
         padding-bottom: 0.75rem;
-        border-bottom: 1.5px solid var(--white);
+        border-bottom: 1px solid var(--white);
     }
     body{
         background: url('images/background-destination-mobile.jpg') no-repeat center center fixed;
@@ -579,10 +584,19 @@ span{
         margin-bottom: 3rem;
     }
     .planet-nav{
-        margin-top:2rem;
-        margin-bottom: 1rem;
+        margin-top:3rem;
+        margin-bottom: 2rem;
     }
     .planet-nav-list{
         justify-content: center;
+    }
+    .destination-pick-text{
+        font-size:16px;
+    }
+    .planet h2{
+        font-size:56px;
+    }
+    .facts{
+        font-size:16px;
     }
 }

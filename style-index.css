@@ -334,15 +334,15 @@ span{
 @media (max-width:805px) {
     .nav-list .current-page{
         padding-bottom: 0.75rem;
-        border-bottom: 1.5px solid var(--white);
+        border-bottom: 1px solid var(--white);
     }
     .nav-list .nav-item:hover a{
         padding-bottom: 0.75rem;
-        border-bottom: 1.5px solid rgba(255, 255, 255, 0.50);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.50);
         transition:100ms;
     }
     .nav-list .nav-item:hover .current-page{
         padding-bottom: 0.75rem;
-        border-bottom: 1.5px solid var(--white);
+        border-bottom: 1px solid var(--white);
     }
 }
