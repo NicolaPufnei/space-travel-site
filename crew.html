@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-crew.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<header>
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html"><span style="font-weight: 700;">00</span> Home</a></li>
+            <li class="nav-item"><a href="destination.html"><span style="font-weight: 700;">01</span> Destination</a></li>
+            <li class="nav-item"><a class="current-page" href="#"><span style="font-weight: 700;">02</span> Crew</a></li>
+            <li class="nav-item"><a href="#"><span style="font-weight: 700;">03</span> Technology</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-nav-button">
+        <button class="hamburger-button">
+            <svg fill="white" class="hamburger" viewbox="0 0 100 100" width="35px">
+                <rect class="line top"
+                width="80" height="6"
+                x="10" y="25" rx="2">
+                </rect>
+                <rect class="line middle"
+                width="80" height="6"
+                x="10" y="50" rx="2">
+                </rect>
+                <rect class="line bottom"
+                width="80" height="6"
+                x="10" y="75" rx="2">
+                </rect>
+            </svg>
+        </button>
+    </div>
+</header>
+<body>
+    <div class="crew-wrapper">
+        <div class="left-side-info">
+            <div class="title">
+                <h5><span style="opacity:0.25 ; font-weight: 700;">02</span>meet your crew</h5>
+            </div>
+            <div class="general-info">
+                <div class="commander crewmates active">
+                    <h4>Commander</h4>
+                    <h3>Douglas hurley</h3>
+                    <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>    
+                </div>
+                <div class="mission-specialist crewmates inactive">
+                    <h4>Mission specialist</h4>
+                    <h3>MARK SHUTTLEWORTH</h3>
+                    <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+                </div>
+                <div class="pilot crewmates inactive">
+                    <h4>Pilot</h4>
+                    <h3>Victor Glover</h3>
+                    <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
+                </div>
+                <div class="flight-engineer crewmates inactive">
+                    <h4>flight engineer</h4>
+                    <h3>Anousheh Ansari</h3>
+                    <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+                </div>
+            </div>
+            <div class="crew-selector-buttons">
+                <button onclick="button1()" class="button1 active"></button>
+                <button onclick="button2()" class="button2 inactive"></button>
+                <button onclick="button3()" class="button3 inactive"></button>
+                <button onclick="button4()" class="button4 inactive"></button>
+            </div>
+        </div>
+        <div class="right-side-image">
+            <img class="img1 active" src="images/crew/image-douglas-hurley.png" alt="">
+            <img class="img2 inactive" src="images/crew/image-mark-shuttleworth.png" alt="">
+            <img class="img3 inactive" src="images/crew/image-victor-glover.png" alt="">
+            <img class="img4 inactive" src="images/crew/image-anousheh-ansari.png" alt="">
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

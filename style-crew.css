@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+:root{
+    --dark-blue:#0B0D17;
+    --bright-blue:#D0D6F9;
+    --white:#FFFFFF;
+}
+    /* Text of font family */
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
+
+html{
+    /* transition:all 400ms; */
+    font-size:14px;
+}
+body{
+    overflow-x:hidden;
+    background: url('images/background-destination-desktop.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+* {
+    font-family: 'Bellefair', serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    /* Tipograhy */
+
+
+.left-side-text h5{
+    font-size: clamp(16px, 2.5vw , 28px);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4.72px;
+}
+.left-side-text h1{
+    font-size:clamp(100px, 0.1vw, 150px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.left-side-text p{
+    font-size:clamp(15px, 2.5vw, 18px);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+}
+    /* Nav Bar Code */
+
+
+header{
+    /* border:2px solid magenta; */
+    display: flex;
+    position: relative;
+    padding-block:2rem;
+    padding-left:2rem;
+    background-color: transparent;
+    justify-content: space-between;
+}
+header svg{
+    display: block;
+    /* border:2px solid magenta; */
+    align-self: center;
+}
+nav{
+    /* border:2px solid magenta; */
+    width: 60%;
+    z-index:3;
+}
+.nav-list{
+    z-index:99;
+    height: 100%;
+    backdrop-filter: blur(1rem) brightness(1.2);
+    -webkit-backdrop-filter: blur(1rem) brightness(1.2);
+    /* border:2px solid magenta; */
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    padding-block:2rem;
+}
+span{
+    margin-right:0.4rem;
+}
+
+.nav-list a{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:1.25rem;
+    text-transform: uppercase;
+    color:var(--white);
+    text-decoration: none;
+}
+
+
+    /* Dropdown menu button */
+
+
+.mobile-nav-button{
+    z-index:3;
+    display: none;
+}
+.hamburger-button{
+    /* z-index: 100; */
+    background-color: transparent;
+    border:none;
+    appearance: none;
+    cursor:pointer;
+    margin-right: 1.5rem;
+}
+
+     /* hamburger menu animation */
+
+.hamburger-button.is-active .line{
+    transition: y 300ms ease-in,
+        opacity 300ms ease-in 200ms,
+        rotate 300ms ease-in 300ms;
+    transform-origin: center;
+}
+.hamburger-button .line{
+    transition: rotate 300ms ease-in,
+        opacity 300ms ease-in 200ms,
+        y 300ms ease-in 300ms;
+    transform-origin: center;
+}
+.hamburger-button.is-active :is(.top, .bottom){
+    y:50;
+}
+.hamburger-button.is-active .middle{
+    opacity: 0;
+}
+.hamburger-button.is-active .top{
+    rotate:45deg;
+}
+.hamburger-button.is-active .bottom{
+    rotate:-45deg;
+}
+
+
+    /* First page text */
+
+
+.wrapper{
+    /* border:2px solid magenta; */
+    width: 80%;
+    margin-inline:auto;
+    margin-top:7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.left-side-text{
+    width: 50%;
+    max-width: 450px;
+    /* border:2px solid magenta; */
+    color:var(--white);
+}
+.right-side-button{
+    width: 30%;
+    /* border:2px solid magenta; */
+}
+.call-to-action-button{
+    background-color: #979797;
+    width: 200px;
+    height:200px;
+    border:none;
+    padding:5rem;
+    cursor: pointer;
+    border-radius:50%;
+    padding:auto;
+}
+.call-to-action-button a{
+    text-decoration: none;
+    color:var(--dark-blue);
+    font-family: 'Bellefair', serif;
+    font-size:32px;
+    
+}
+
+    /* Round circle button */
+
+.button-wrapper{
+    /* border:2px solid magenta; */
+    width: 50%;
+}    
+.round-button {
+    /* border:2px solid magenta; */
+    border:NONE;
+    width: 50%;
+    padding-block: 20%;
+    border-radius: 50%;
+    margin-inline:25%;
+    cursor:pointer;
+    transition:300ms;
+}
+.round-button-link{
+    font-family: 'Bellefair', serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#0B0D17;
+    font-size:32px;
+}
+.round-button:hover{
+    box-shadow: 0 0 0 60px rgb(255, 255, 255, 0.2);
+    transition:400ms;
+}
+
+    /* Phone version */
+
+@media (max-width:805px){
+    body{
+        background: url("images/background-home-mobile.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .nav-list{
+        /* border: 2px solid magenta; */
+        padding:9rem 2rem;
+        justify-content:flex-start;
+        height:100vh;
+        top:0;
+        right:-100%;
+        width: 55%;
+        position:fixed;
+        flex-direction: column;
+        transition: 300ms ease-in;
+    }
+    .nav-list.is-active{
+        right:0;
+    }
+    .mobile-nav-button{
+        display: flex;
+        z-index: 3;
+    }
+    .wrapper{
+        flex-direction: column;
+        margin-top:0;
+        gap:5rem;
+    }
+    .left-side-text{
+        width: 100%;
+        min-width: 100%;
+        margin-inline: auto;
+        text-align: center;
+    }
+    .button-wrapper{
+        width: 100%;
+    } 
+}
+
+
+    /* link hover state */
+
+
+.nav-item a{
+    letter-spacing: 2.7px;
+}
+.nav-list .current-page{
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid var(--white);
+}
+.nav-list .nav-item:hover a{
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.50);
+    transition:100ms;
+}
+.nav-list .nav-item:hover .current-page{
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid var(--white);
+}
+
+
+
+        /* destination page typography */
+
+
+
+.destination-wrapper .destination-pick-text{
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4.72px;
+}
+.planet-selector-list a{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    text-transform:uppercase;
+}
+.planet h2{
+    font-family: 'Bellefair', serif;
+    font-size:100px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+/* .moon .facts{
+    font-family: 'Barlow', sans-serif;
+    font-size:18px;
+    font-weight: 400;
+    color:#D0D6F9;
+} */
+.about .p1{
+    font-size:14px;
+    letter-spacing: 2.36px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    color:#D0D6F9;
+}
+.about .p2{
+    font-size:28px;
+    font-family: 'Bellefair', sans-serif;
+    text-transform: uppercase;
+}
+.facts{
+    color:#D0D6F9;
+    line-height: 32px;
+    font-size:18px;
+    font-family: 'Barlow' , sans-serif;
+    border-bottom: 1px solid #383B4B;
+    padding-bottom: 1.8rem;
+}
+.about{
+    padding-top: 1.8rem;
+}
+
+        /* destination page */
+
+
+.planet{
+    position: absolute;
+}
+.planet-info{
+    position: relative;
+}
+
+    /* text selector code */
+
+.moon.active{
+    scale:1;
+    transition:530ms ease-in-out;
+}
+.moon.inactive{
+    scale:0;
+    margin-top: 10rem;
+    margin-left:15rem;
+    transition: 530ms ease-in-out;
+}
+.mars.active{
+    scale:1;
+    transition: 530ms ease-in-out;
+}
+.mars.inactive{
+    scale:0;
+    margin-top: 10rem;
+    margin-left:15rem;
+    transition: 530ms ease-in-out;
+}
+.europa.active{
+    scale:1;
+    transition: 530ms ease-in-out;
+}
+.europa.inactive{
+    scale:0;
+    margin-top: 10rem;
+    margin-left:15rem;
+    transition: 530ms ease-in-out;
+}
+.titan.active{
+    scale:1;
+    transition: 530ms ease-in-out;
+}
+.titan.inactive{
+    scale:0;
+    margin-top: 10rem;
+    margin-left:15rem;
+    transition: 530ms ease-in-out;
+}
+
+    /* photo selector code */
+
+
+.moon-photo.active{
+    scale:1;
+    transition: 530ms ease-in-out;
+}
+.moon-photo.inactive{
+    scale:0;
+    transition: all 530ms ease-in-out;
+}
+.mars-photo.active{
+    scale:1;
+    transition: 530ms ease-in-out;
+}
+.mars-photo.inactive{
+    scale:0;
+    transition: 530ms ease-in-out;
+}
+.europa-photo.active{
+    scale:1;
+    transition: 530ms ease-in-out;
+}
+.europa-photo.inactive{
+    scale:0;
+    transition: 530ms ease-in-out;
+}
+.titan-photo.active{
+    scale:1;
+    transition: 530ms ease-in-out;
+}
+.titan-photo.inactive{
+    scale:0;
+    transition: 530ms ease-in-out;
+}
+
+
+
+
+.destination-wrapper{
+    /* border:2px solid magenta; */
+    display: flex;
+    margin-top:2rem;
+    flex-direction: column;
+    gap:2rem;
+    width: 80%;
+    margin-inline:auto;
+    color:white;
+}
+.planets-photos{
+    /* border:2px solid magenta; */
+    width: 60%;
+    position: relative;
+}
+.moon-photo,
+.mars-photo,
+.europa-photo,
+.titan-photo{
+    /* border:2px solid magenta; */
+    position: absolute;
+    z-index: 0;
+}
+.planet-right-side-info{
+    width: 40%;
+    /* border:2px solid magenta; */
+}
+.destination-info{
+    /* border:2px solid magenta; */
+    margin-top:2rem;
+    display: flex;
+}
+.planet-nav-list{
+    display: flex;
+    gap:2rem;
+    list-style-type: none;
+}
+.planet-nav-list button {
+    border:none;
+    font-family: 'Barlow Condensed' , sans-serif;
+    font-size:16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    background-color: transparent;
+    color:#D0D6F9;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.planet-nav-list button:hover{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 0.5rem;
+    transition:300ms ease-in-out;
+}
+.planet-nav-list button.active:hover{
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid white;
+}
+.moon-button{
+    padding-bottom: 0rem;
+    border-bottom: 0px;
+    transition: padding 150ms ease-in
+        border 150ms ease-in 150ms;
+}
+.moon-button.active{
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid white;
+    color:white;
+    transition: 300ms ease-in-out;
+}
+.mars-button.active{
+    transition: 300ms ease-in-out;
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid white;
+    color:white;
+}
+.europa-button.active{
+    transition: 300ms ease-in-out;
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid white;
+    color:white;
+}
+.titan-button.active{
+    transition: 300ms ease-in-out;
+    padding-bottom:0.5rem;
+    border-bottom: 1px solid white;
+    color:white;
+}
+.about{
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap:3.5rem;
+}
+.transparent-photo{
+    position:relative;
+    display: none;
+}
+@media (max-width:805px) {
+    .nav-list .current-page{
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--white);
+    }
+    .nav-list .nav-item:hover a{
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+        transition:100ms;
+    }
+    .nav-list .nav-item:hover .current-page{
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--white);
+    }
+    body{
+        background: url('images/background-destination-mobile.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .transparent-photo{
+        display: flex;
+        /* border:2px solid magenta; */
+        width: 100%;
+        opacity: 0;
+    }
+    .destination-wrapper{
+        width: 80%;
+    }
+    .destination-pick-text{
+        /* border:2px solid magenta; */
+        text-align: center;
+        width: 100%;
+    }
+    .planets-photos{
+        width: 100%;
+        align-items: center;
+        /* border:2px solid magenta; */
+    }
+    .planets-container{
+        /* border:2px solid magenta; */
+        position: relative;
+    }
+    .moon-photo,
+    .mars-photo,
+    .europa-photo,
+    .titan-photo{
+        width: 100%;
+        /* margin-top:-25rem; */
+        /* border:2px solid magenta; */
+    }
+    .destination-info{
+        width: 100%;
+        /* gap:5rem; */
+        flex-direction: column;
+    }
+    .planet-right-side-info{
+        width: 100%;
+        text-align: center;
+    }
+    .about{
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+    .planet-nav{
+        margin-top:3rem;
+        margin-bottom: 2rem;
+    }
+    .planet-nav-list{
+        justify-content: center;
+    }
+    .destination-pick-text{
+        font-size:16px;
+    }
+    .planet h2{
+        font-size:56px;
+    }
+    .facts{
+        font-size:16px;
+    }
+}
+
+
+.crew-wrapper{
+    border:2px solid magenta;
+    color:white;
+    display: flex;
+    width: 90%;
+    height:84vh;
+    margin-inline:auto;
+}
+.left-side-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border:2px solid magenta;
+    width: 50%;
+    padding-block:2rem;
+}
+.right-side-image{
+    position: relative;
+    width: 50%;
+}
+.right-side-image img{
+    position: absolute;
+    bottom:0;
+    display: flex;
+}
+.right-side-image img.inactive{
+    scale:0;
+    transition:500ms ease-in-out 50ms;
+}
+.right-side-image img.active{
+    scale:1;
+    transition:500ms ease-in-out 50ms;
+}
+.title{
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 4.72px;
+    color:#FFFFFF;
+    font-size:28px;
+    /* border:2px solid magenta; */
+}
+.general-info{
+    position: relative;
+    /* border:2px solid magenta; */
+}
+.general-info .crewmates.inactive{
+    scale:0;
+    transition: 500ms ease-in-out;
+}
+.general-info .crewmates.active{
+    scale:1;
+    transition: 500ms ease-in-out 50ms;
+}
+.general-info h4{
+    font-size: 32px;
+    font-family: 'Bellefair' , sans-serif;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    opacity:50.42%;
+}
+.general-info h3{
+    text-transform: uppercase;
+    font-family: 'Bellefair' , sans-serif;
+    font-size:56px;
+    color:#FFFFFF;
+}
+.general-info p{
+    font-family: 'Barlow' , sans-serif;
+    font-size: 18px;
+    color:#D0D6F9;
+    line-height: 32px;
+}
+.crewmates{
+    top:-100px;
+    position:absolute;
+}
+.crew-selector-buttons button{
+    background-color:#FFFFFF;
+    opacity:17.44%;
+    width: 25px;
+    
+    aspect-ratio: 1;
+    border-radius:50%;
+    cursor: pointer;
+    transition:300ms ease-in-out;
+}
+.crew-selector-buttons button.active{
+    opacity:100%;
+    transition:300ms ease-in-out;
+}
+.crew-selector-buttons button.active:hover{
+    opacity:100%;
+    transition:300ms ease-in-out;
+}
+.crew-selector-buttons button:hover{
+    opacity: 50.01%;
+    transition:300ms ease-in-out;
+}
